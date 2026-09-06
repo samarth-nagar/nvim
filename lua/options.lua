@@ -12,17 +12,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 vim.o.wrap = true
-vim.o.textwidth = 8000
 vim.opt.colorcolumn = "80"
-
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "markdown",
-	callback = function()
-		vim.o.textwidth = 0
-	end,
-})
-
-vim.o.linebreak = false
 
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
@@ -88,6 +78,8 @@ vim.opt.linebreak = true
 
 vim.opt.conceallevel = 1
 
+vim.opt.backspace = "start,indent,eol"
+vim.opt.autoread = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 -- vim: ts=4 sts=4 sw=4 et
